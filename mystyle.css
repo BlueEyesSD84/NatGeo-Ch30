@@ -1,0 +1,94 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Lato'
+    sans-serif;
+    background-color: black;
+    color: white;
+}
+img{
+    max-width: 100%;
+}
+
+nav.menu a{
+    text-decoration: none;
+}
+
+
+/*utilities*/
+
+/*menu*/
+nav.menu{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    align-items: center;
+    background-color: white;
+}
+nav.menu .frame-logo{
+    height: 32px;
+    padding-left: 15px;
+}
+
+nav.menu a{
+    color: black;
+    margin-right: 30px;
+}
+
+.complete-logo, .link-news, .link-menu, .link-search{
+    display: none;
+}
+
+.link-login{
+ text-transform: uppercase;
+ font-size: 12px;
+ font-weight: 700px;
+ letter-spacing: 3px;
+}
+
+nav.menu a.link-sub{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    background-color: black;
+    color:white;
+    padding: 15px 14px 12px 14px;
+}
+
+nav.menu a.link-sub:hover{
+    background: #ffcc00;
+    color:black;
+
+}
+
+nav.menu a.link-arrows{
+color: black;
+    
+}
+/*menu*/
+
+
+/*header*/
+header h1{
+    color: white;
+    background-color: black;
+
+
+}
+
+header p{
+    color: white;
+    height: 230px;
+}
+
+header .line{
+
+}
+.history, .stranger, .read1{
+    display: none;
+}
