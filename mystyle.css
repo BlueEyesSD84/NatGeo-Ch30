@@ -5,23 +5,46 @@
     padding:0;
 }
 body{
-    font-family: 'Lato'
-    sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: black;
     color: white;
 }
 img{
     max-width: 100%;
+ }
+ h1,h2,h3{
+    text-transform: uppercase;
+ }
+ h3{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+ }
+/*utilities*/
+.gray-text{
+    color: gray;
 }
-
+.black-text{
+    color: black;
+}
+.read-btn{
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 9px;
+    font-weight: 700;
+}
+.container{
+    width: 94%;
+    margin: 10px auto;
+    /*works for margin and padding*/
+    /*4 values top right bottom left*/
+    /*2 values top-bottom left-right*/
+    /*1 value all around*/
+}
+/*menu*/
 nav.menu a{
     text-decoration: none;
 }
-
-
-/*utilities*/
-
-/*menu*/
 nav.menu{
     display: flex;
     justify-content: space-between;
@@ -33,62 +56,178 @@ nav.menu .frame-logo{
     height: 32px;
     padding-left: 15px;
 }
-
 nav.menu a{
     color: black;
     margin-right: 30px;
 }
-
 .complete-logo, .link-news, .link-menu, .link-search{
     display: none;
 }
-
 .link-login{
  text-transform: uppercase;
  font-size: 12px;
  font-weight: 700px;
  letter-spacing: 3px;
 }
-
 nav.menu a.link-sub{
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 3px;
-    font-weight: 700;
-    background-color: black;
-    color:white;
+    font-weight: 700;   
     padding: 15px 14px 12px 14px;
+    background: linear-gradient(to left,  yellow 50%,  green 50%) right;
+    background-size: 200% 100%;
+    transition:all .5s ease;
 }
-
 nav.menu a.link-sub:hover{
-    background: #ffcc00;
-    color:black;
-
+    background-position: left;
 }
-
 nav.menu a.link-arrows{
 color: black;
-    
 }
-/*menu*/
-
-
 /*header*/
+a.link-sub2{
+    background: linear-gradient(to left,  black 50%,  green 50%) right;
+    background-size: 200% 100%;
+    transition:all .5s ease;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 4px;
+}
+a.link-sub2:hover{
+    background-position: left;
+}
 header h1{
     color: white;
     background-color: black;
-
-
+    padding: 15px;
+    text-align: center;
 }
-
 header p{
-    color: white;
-    height: 230px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: lato, sans-serif;
+    font-style: bold;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+div.line{
+    padding: 2px;
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-bottom: 30px;
+    background-color: gold;
+    height: .5px;
+}
+/*---main-news---*/
+/*the parent*/
+.main-news{
+    position:relative;
+    height:400px;
+    margin-bottom: 20px;
+}
+/*stretches the img to fill the screen*/
+.main-news-img img{
+    height: 400px;
+    
+}
+/*the child*/
+.main-news-text{
+    position: absolute;
+    top:200px;
+    left:30px;
+}
+/*causes the image to not exceed the container*/
+.main-news-img{
+    overflow:hidden;
+}
+/*causes the image to pop*/
+.main-news-img img:hover{
+    transform:scale(1.1); 
+    cursor:pointer;
+}
+.main-news-text p.title{
+    font-size: 32px;
+    margin: 20px 0;
+    word-spacing: 4px;
+    font-weight: 700;
+    line-height: 1.5;
 }
 
-header .line{
+/*---Secondary News--*/
+.secondary-news{
+    height: 450px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.secondary-news-img{
+    height: 280px;
+}
+
+.secondary-news-img img{
+    height: 100%;
+    width: 100%;
+}
+.secondary-news-text{
+    height: 130px;
+    background-color: white;
+    padding:20px;
+}
+.secondary-news-text p.title{
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    font-weight: 700;
+    line-height: 1;
+}
+.secondary-news-text span{
+    text-decoration: underline;
+}
+/*--Todays Pics*/
+h2{
+    font-size: 30px;
+    letter-spacing: 5px;
+    border-left: 5px solid #ffcc00;
+    padding-left: 20px;
+    margin: 30px 0;
 
 }
-.history, .stranger, .read1{
-    display: none;
+.pick-item{
+    display:flex;
+    justify-content: space-between;
+}
+.pick-item img{
+    width: 80px;
+    height: 80px;
+}
+.pick-item-text{
+    flex-basis: 78%/*can be used to set the width*/
+}
+.pick-item-text p{
+    font-weight: 700;
+    margin-top: 10px;
+}
+.pick-item-text h3{
+    font-weight: 700;
+}
+/*---Asian Theaters--*/
+.kick-item{
+    display: flex;
+    justify-content: space-between;
+}
+.kick-item-text p{
+    font-weight: 700;
+    margin-top: 10px;
+}   .kick-item-text h3{
+    font-weight: 700;
+}
+.kick-item-text{
+    flex-basis: 78%/*can be used to set the width*/
+}
+.kick-item-img img{
+    width: 75px;
+    height: 75px;
+}
+.kick-item-text{
+    flex-basis: 78%
 }
