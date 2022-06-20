@@ -27,3 +27,53 @@ th{
     background-color: rgb(255, 255, 0);
     font-weight: bold;
 }
+
+/*display flex container css*/
+
+.flex-container{
+    display: flex;
+    flex-direction: row; /*If change to "column" then will change the justify-content will be vertical vs horizontal*/
+    justify-content: space-evenly;/*left to right*,  the align-item will be affected if the "flex-direction" is changed from "row" to "column"*/
+    align-items: center; /*organize flex children  position in the container*/
+    flex-wrap: wrap;
+
+
+
+    background-color: #dedede;
+    height: 300px;
+}
+
+.flex-child{
+    flex-basis: 200px;
+    margin-top: 10px;
+    background-color: green;
+    color: lawngreen;
+    border: 1px solid lawngreen;
+    height: 50px;
+}
+
+/*grid*/
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr; /*This code allows to automatically size the columns*/
+    column-gap: 30px;/*This will add a gap between columns*/
+
+    background-color: #dedede;
+    height: 300px;
+
+}
+.grid-child{
+    background-color: grey;
+    border: 1px solid black;
+}
+/*Mobile View First*/
+body{
+    background-color: #ffeea1;
+}
+/*takes note of the screen size*/
+@media(min-width:768px){/*768 is a tablet size*/
+    body{
+        background-color: red;
+    }
+}
